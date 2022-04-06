@@ -1,0 +1,909 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AreaStorage">
+    <Position X="17.75" Y="32.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAwBAAAAAAQAggAEAAoQAAAACAyAAAACQAgAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\Word snatcher\Player\AreaStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthController">
+    <Position X="58.5" Y="15.75" Width="2.25" />
+    <Members>
+      <Field Name="emailRegisterField" Hidden="true" />
+      <Field Name="passwordLoginField" Hidden="true" />
+      <Field Name="passwordRegisterField" Hidden="true" />
+      <Field Name="passwordRegisterVerifyField" Hidden="true" />
+      <Field Name="usernameLoginField" Hidden="true" />
+      <Field Name="usernameRegisterField" Hidden="true" />
+      <Field Name="warningInternet" Hidden="true" />
+      <Field Name="warningLoginText" Hidden="true" />
+      <Field Name="warningRegisterText" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BCABAAAAAAgAAEAAGAAACAgAAABBAQkAAAAQBgBAoEA=</HashCode>
+      <FileName>Assets\Scripts\Database\AuthController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="DBreference" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BoardGameController">
+    <Position X="37.25" Y="31.5" Width="2.5" />
+    <AssociationLine Name="ui" Type="BoardGameUIController" FixedToPoint="true">
+      <Path>
+        <Point X="37.562" Y="31.5" />
+        <Point X="37.562" Y="29.242" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="networkManager" Type="EscapistNetworkManager" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="37.25" Y="33.188" />
+        <Point X="34.134" Y="33.188" />
+        <Point X="34.134" Y="36.562" />
+        <Point X="31.333" Y="36.562" Type="JumpStart" />
+        <Point X="31.167" Y="36.562" Type="JumpEnd" />
+        <Point X="28.5" Y="36.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="localPlayer" Type="BoardPlayer" FixedFromPoint="true">
+      <Path>
+        <Point X="37.25" Y="32.375" />
+        <Point X="33.5" Y="32.375" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="playerOnTurn" Type="BoardPlayer" FixedFromPoint="true">
+      <Path>
+        <Point X="37.25" Y="32.75" />
+        <Point X="33.5" Y="32.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="winner" Type="BoardPlayer" FixedFromPoint="true">
+      <Path>
+        <Point X="37.25" Y="31.938" />
+        <Point X="33.5" Y="31.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>MAQAABCAAOAAEYIEAI1RAQAAQARMQAAAIBQgAgEUMAA=</HashCode>
+      <FileName>Assets\Scripts\Board\BoardGameController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ui" />
+      <Field Name="camController" />
+      <Field Name="networkManager" />
+      <Field Name="localPlayer" />
+      <Field Name="playerOnTurn" />
+      <Field Name="winner" />
+      <Field Name="gameState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BoardGamePlayerDisplay">
+    <Position X="39.75" Y="25.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AhQAAAAAAAAAASAAEAEAAAAAAAgAAACQAAgAAAAIKAA=</HashCode>
+      <FileName>Assets\Scripts\Board\UI Scripts\BoardGamePlayerDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoardGameUIController">
+    <Position X="35.75" Y="25.25" Width="2.25" />
+    <AssociationLine Name="localBoardPlayer" Type="BoardPlayer" FixedFromPoint="true">
+      <Path>
+        <Point X="35.75" Y="25.667" />
+        <Point X="33.5" Y="25.667" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAQEAAAAAAAAAgAEAACCAEAAACBAACAAAAAAAAAIIEA=</HashCode>
+      <FileName>Assets\Scripts\Board\UI Scripts\BoardGameUIController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="localBoardPlayer" />
+      <Field Name="playerDisplays" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BoardPlayer">
+    <Position X="30.75" Y="16.25" Width="2.75" />
+    <Members>
+      <Field Name="testSyncVar" Hidden="true" />
+    </Members>
+    <AssociationLine Name="arrowPrefabs" Type="BoardTransactionArrow" FixedFromPoint="true">
+      <Path>
+        <Point X="33.5" Y="21.25" />
+        <Point X="35.5" Y="21.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="snatcherUIScript" Type="SceneSnatcherScript" FixedFromPoint="true">
+      <Path>
+        <Point X="33.5" Y="24.812" />
+        <Point X="41.5" Y="24.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="SnatcherCharacter" Type="Snatcher" FixedFromPoint="true">
+      <Path>
+        <Point X="33.5" Y="18.938" />
+        <Point X="38" Y="18.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AVQkMBjjAzIDlSskFK1bU0AHqwESAgRaSRTVCDWCyCA=</HashCode>
+      <FileName>Assets\Scripts\Player\BoardPlayer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="networkManager" />
+      <Field Name="currentTile" />
+      <Field Name="targetTile" />
+      <Field Name="arrowPrefabs" />
+      <Field Name="snatcherUIScript" />
+      <Field Name="boardCharacter" />
+      <Field Name="SnatcherCharacter" />
+      <Field Name="appliedEffect" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BoardPlayerCharacter">
+    <Position X="35.75" Y="14.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgBAAAAEAAAgAAAEAAAAAAIAAAhAAAAAAAAAAAIAAE=</HashCode>
+      <FileName>Assets\Scripts\Player\BoardPlayerCharacter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="owner" />
+      <Field Name="effectShowcase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BoardTransactionArrow">
+    <Position X="35.5" Y="19.5" Width="2" />
+    <Members>
+      <Field Name="testPlayerOwner" Hidden="true" />
+    </Members>
+    <AssociationLine Name="playerOwner" Type="BoardPlayer" FixedFromPoint="true">
+      <Path>
+        <Point X="35.5" Y="20.188" />
+        <Point X="33.5" Y="20.188" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACQAAKAAgAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Board\BoardTransactionArrow.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="playerOwner" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CameraControl">
+    <Position X="41.75" Y="33.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="CameraControl.cameraMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Camera\CameraControl.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gCQAACAAgCgBAAGAIABAEAAkAABAAAAAAJAAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Camera\CameraControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraSnatch">
+    <Position X="44.25" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAgAAAAAAAAAAIAAAIAAAAAAAAAAAAAIIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\Word snatcher\maingame\CameraSnatch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chat">
+    <Position X="69.5" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACAgAAAAAABAAAYAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Chat\Chat.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="chatWindow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChatController">
+    <Position X="76.25" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACpAEAAACAgAAAAAABAAAYAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Chat\ChatController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="chatWindow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChatWindowUI">
+    <Position X="72.75" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAgAAAQAAAgAAAgAAAAAAAAAABIAEA=</HashCode>
+      <FileName>Assets\Scripts\Chat\ChatWindowUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBConnector">
+    <Position X="49.5" Y="15.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACBAAAAAAgAEAEAACABAAAgAAAAABAAAgEA=</HashCode>
+      <FileName>Assets\Scripts\Database\DBConnector.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="DBreference" />
+      <Field Name="userInfoUIController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DestroyRockController">
+    <Position X="14.25" Y="13.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IQMgEAAAAAAAAAAAAAAEAAAgAAAAAAAAAGAAAAAQAgA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuickMinigame\Destroy the rock\DestroyRockController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DestroyRockUI">
+    <Position X="15" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AKkAAAAAEAJAAAAAAAAAAAABAAAAABAAQQAABAABAAE=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuickMinigame\Destroy the rock\DestroyRockUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoorUIController" Collapsed="true">
+    <Position X="28" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IMAAAGAAAAAAAACEAAAAAAAAAABAAAAAABAAAAABAFA=</HashCode>
+      <FileName>Assets\Scripts\Board\DoorUIController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EndGameUIController">
+    <Position X="26" Y="38.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAEAIAAQAAAAAAAABAAAQQABAIAAAAEMA=</HashCode>
+      <FileName>Assets\Scripts\Board\EndGameUIController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="networkManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EscapistNetworkDiscovery">
+    <Position X="65.75" Y="11.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAgAAABAEAACAAAAEAAAACAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Networking\EscapistNetworkDiscovery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EscapistNetworkDiscoveryHUD">
+    <Position X="66.25" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAABAAAAAAAAAEAAIAAAAAAAAAAAAAAAEEAQAA=</HashCode>
+      <FileName>Assets\Scripts\Networking\EscapistNetworkDiscoveryHUD.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="networkDiscovery" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EscapistNetworkManager">
+    <Position X="26" Y="29.75" Width="2.5" />
+    <AssociationLine Name="lobbyUIScript" Type="LobbyUIController" FixedFromPoint="true">
+      <Path>
+        <Point X="26.438" Y="29.75" />
+        <Point X="26.438" Y="27.915" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="lobbyPlayerPrefab" Type="LobbyPlayer">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.002" Y="0.077" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AGeIAAAAEIAggAEgACQYAAWADAAEAAAQAByCAEAIAFA=</HashCode>
+      <FileName>Assets\Scripts\Networking\EscapistNetworkManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="lobbyUIScript" />
+      <Field Name="lobbyPlayerPrefab" />
+      <Field Name="boardPlayerPrefab" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Hash">
+    <Position X="73.25" Y="12" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Static\Hash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Indicator">
+    <Position X="45" Y="28.25" Width="2.75" />
+    <AssociationLine Name="spinnerWheel" Type="WheelSpinner" FixedFromPoint="true">
+      <Path>
+        <Point X="47.75" Y="29.438" />
+        <Point X="50" Y="29.438" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AESAgAAAEAAAIQDAAEAAgAABAAABEBGBCECgoABIANg=</HashCode>
+      <FileName>Assets\Scripts\WheelSpinner\Indicator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="spinnerWheel" />
+      <Field Name="player" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Item">
+    <Position X="23.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAAAAAIAAAAAAAAAABACAAABAgAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Inventory\Item\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LetterCube">
+    <Position X="83" Y="15" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIaAABACACAAAABAAQAQQAEAAAAQAAAAAAECAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\Word snatcher\LetterCube.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ListLetter">
+    <Position X="83.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\Word snatcher\Player\ListLetter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadingSceneController" Collapsed="true">
+    <Position X="87.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAABAAAgAAAAGAAAAAAAAAAAAABAAAAAAAAEAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Menu\LoadingSceneController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LobbyInfo">
+    <Position X="64" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAEAAAAIAABQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Lobby\LobbyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LobbyInfoDisplay">
+    <Position X="60.5" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAQBCACAAAAAAAAAAAEAAgAAABAAAAABkBAEAA=</HashCode>
+      <FileName>Assets\Scripts\Lobby\LobbyInfoDisplay.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="lobbyListUIController" />
+      <Property Name="lobbyInfo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LobbyListUIController">
+    <Position X="60.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAwABAAABAAAAAAgRAkAEAkAAAAAAACQCAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Lobby\LobbyListUIController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LobbyManager">
+    <Position X="22" Y="25.25" Width="1.75" />
+    <AssociationLine Name="lobbyUIScript" Type="LobbyUIController" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="23.75" Y="27.125" />
+        <Point X="25.25" Y="27.125" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="networkManager" Type="EscapistNetworkManager" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="23.75" Y="27.313" />
+        <Point X="24.807" Y="27.313" />
+        <Point X="24.807" Y="30.125" />
+        <Point X="26" Y="30.125" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.106" Y="-0.297" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAIAACQAAAAAAABAAAAAAAQCAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Lobby\LobbyManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="lobbyUIScript" />
+      <Field Name="networkManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LobbyPlayer">
+    <Position X="27.75" Y="23" Width="2.5" />
+    <AssociationLine Name="networkManager" Type="EscapistNetworkManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.408" Y="0.087" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAIhAIAIAgAABACKwAoACAAgSAAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Player\LobbyPlayer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="networkManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LobbyUIController">
+    <Position X="25.25" Y="24.5" Width="1.75" />
+    <AssociationLine Name="networkManager" Type="EscapistNetworkManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.29" Y="0.11" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAIAACQAIAAAACAAAAQQAYAAQAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Lobby\LobbyUIController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="networkManager" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="playerDisplays" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LocalBoardPlayerDisplay">
+    <Position X="42.75" Y="26" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Board\UI Scripts\LocalBoardPlayerDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenuUI">
+    <Position X="75.5" Y="17.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAIIAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Lobby\MainMenuUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MinigameCenter" Collapsed="true">
+    <Position X="87.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAACEAAAAAAAAgAAAAAAAAAADAAAAABAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\MinigameCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MinigameController">
+    <Position X="14.5" Y="37.25" Width="2" />
+    <AssociationLine Name="winner" Type="BoardPlayer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.5" Y="38.381" />
+        <Point X="26.792" Y="38.381" Type="JumpStart" />
+        <Point X="26.958" Y="38.381" Type="JumpEnd" />
+        <Point X="31.25" Y="38.381" />
+        <Point X="31.25" Y="35.953" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIIAAEAAAAAAAAAAAAAACAAAgAAABEA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\MinigameController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="winner" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="minigames" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NetworkItem">
+    <Position X="23.5" Y="15.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Player\Inventory\Item\NetworkItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="item" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NewItemDecitionUI">
+    <Position X="70.5" Y="10.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAACAAAAAAAQAAAABAEBAAAAABAAAAAAAAAADAEAEA=</HashCode>
+      <FileName>Assets\Scripts\Player\Inventory\NewItemDecitionUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerDisplay">
+    <Position X="25.25" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAEAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Lobby\PlayerDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInventory">
+    <Position X="26.75" Y="16.75" Width="2" />
+    <AssociationLine Name="owner" Type="BoardPlayer" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="28.75" Y="20.125" />
+        <Point X="30.75" Y="20.125" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BAFAAAAAACAAoAAACAQAAAAEQAAACAAAAAAAAEAAQIA=</HashCode>
+      <FileName>Assets\Scripts\Player\Inventory\PlayerInventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="owner" />
+      <Field Name="item" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Question">
+    <Position X="81" Y="15" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAEAAAEAAAAAIAAAEAAAAQAAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuizMinigame\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestionSnatcher">
+    <Position X="18.75" Y="26" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAACAEAAAAAAAAIBAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\Word snatcher\QuestionSnatcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuickGame">
+    <Position X="18.5" Y="16" Width="2.75" />
+    <AssociationLine Name="player" Type="BoardPlayer" FixedFromPoint="true">
+      <Path>
+        <Point X="21.25" Y="21.375" />
+        <Point X="30.75" Y="21.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>wSIAAAAIEBBQAEIEAAAhIAAhEAAAECABAAAAEBAQMgQ=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuickGame\QuickGame.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="player" />
+      <Field Name="gameUI" />
+      <Field Name="popUpWindow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="QuickGameController">
+    <Position X="21.25" Y="12.25" Width="1.75" />
+    <AssociationLine Name="quickGames" Type="QuickGame" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.094" Y="15.281" />
+        <Point X="22.094" Y="16.688" />
+        <Point X="21.25" Y="16.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAgJCAgAGAAgAAAAAAAAAAAAABAAAAAAAAAAAACAEA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuickGame\QuickGameController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="quickGames" />
+      <Field Name="rewardPool" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="QuickGamePopUpWindow">
+    <Position X="11.5" Y="20.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAEAAAAAAAAGAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuickGame\QuickGamePopUpWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuickGameUI">
+    <Position X="18.5" Y="9.5" Width="2" />
+    <AssociationLine Name="quickGame" Type="QuickGame" FixedFromPoint="true">
+      <Path>
+        <Point X="20" Y="14.261" />
+        <Point X="20" Y="16" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.001" Y="0.1" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAEAAAAEDAAAAACIgAFAAAAAAADEAAgAAgEBAAAgBA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuickGame\QuickGameUI.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="quickGame" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Reward">
+    <Position X="15" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAIAAQAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Inventory\Reward.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneSnatcherScript">
+    <Position X="41.5" Y="18" Width="1.75" />
+    <AssociationLine Name="owner" Type="BoardPlayer" FixedToPoint="true">
+      <Path>
+        <Point X="41.5" Y="24" />
+        <Point X="33.5" Y="24" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CAgAACADGIESiEEAgggBAIAAAFBBAAAAAABAAQoAIEE=</HashCode>
+      <FileName>Assets\Scripts\Minigame\Word snatcher\SceneSnatcherScript.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="owner" />
+      <Field Name="cameraSnatch" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SelectionIndicator">
+    <Position X="76" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAAAAABAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Minigame\Word snatcher\Player\SelectionIndicator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snatcher">
+    <Position X="38" Y="18" Width="2" />
+    <AssociationLine Name="owner" Type="BoardPlayer" FixedFromPoint="true">
+      <Path>
+        <Point X="38" Y="18.438" />
+        <Point X="33.5" Y="18.438" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgJAAAAsIAQgAAiAAAAQAAQABCAAAAAAAAIAAAKAEg=</HashCode>
+      <FileName>Assets\Scripts\Minigame\Word snatcher\Player\Snatcher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="owner" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SortNumber">
+    <Position X="15" Y="22.25" Width="2" />
+    <InheritanceLine Type="QuickGame" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.5" Y="22.375" />
+        <Point X="17" Y="22.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAIAEAAAAAAAAAAAAAABAAAkAAQAAgAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuickMinigame\SortNumber\SortNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SortNumberUI">
+    <Position X="19" Y="5" Width="1.5" />
+    <InheritanceLine Type="QuickGameUI" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="20.188" Y="9.5" />
+        <Point X="20.188" Y="6.877" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuickMinigame\SortNumber\SortNumberUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StatusEffect">
+    <Position X="35" Y="30" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Inventory\Item\StatusEffect\StatusEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StatusEffectShowcase">
+    <Position X="36.75" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAABAAAAwAAAAAgAAAAQQAEAQEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Inventory\Item\StatusEffect\StatusEffectShowcase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TabColorController">
+    <Position X="14.25" Y="17.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABIAEAAICAAAAAAAgAABAAAkAAAAAAQAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuickMinigame\TabColor\TabColorController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TabColorUI">
+    <Position X="16.5" Y="4.75" Width="1.75" />
+    <InheritanceLine Type="QuickGameUI" FixedToPoint="true">
+      <Path>
+        <Point X="19.5" Y="9.5" />
+        <Point X="19.5" Y="8.062" />
+        <Point X="18.25" Y="8.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAIAAABAAEAgAQEAAAAAAACAAEAABAAACgAACA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuickMinigame\TabColor\TabColorUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tile">
+    <Position X="31.25" Y="10.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAIABAACCAAAAAAAAAQAAAIAAAAAAAAAEAAAAAABUA=</HashCode>
+      <FileName>Assets\Scripts\Board\Tiles\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tile_Door">
+    <Position X="27.25" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAQAAAAgABAAAAATAABhAAAAAAABAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Board\Tiles\Tile_Door.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="doorUI" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Tile_End">
+    <Position X="30" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Board\Tiles\Tile_End.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tile_Punish">
+    <Position X="32" Y="6.25" Width="1.5" />
+    <InheritanceLine Type="Tile" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="32.375" Y="10.75" />
+        <Point X="32.375" Y="10.008" />
+        <Point X="32.676" Y="10.008" />
+        <Point X="32.676" Y="8.127" />
+        <Point X="32.688" Y="8.127" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="type" Type="punishType">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.129" Y="0.051" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAQAAAAAAABAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Board\Tiles\Tile_Punish.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Tile_QuickGame">
+    <Position X="34" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Board\Tiles\Tile_QuickGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tile_Start">
+    <Position X="35.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Board\Tiles\Tile_Start.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserController">
+    <Position X="78.75" Y="15.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAABCAAAAAAAAAAAAEEA=</HashCode>
+      <FileName>Assets\Scripts\Player\UserController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInfoUIController">
+    <Position X="49.5" Y="19.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAABBAAAAAgACAAACQABCAAAAgAAAAABAAwA=</HashCode>
+      <FileName>Assets\Scripts\Database\UserInfoUIController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="user" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WheelSpinner">
+    <Position X="50" Y="24.25" Width="2.25" />
+    <AssociationLine Name="indicatorsOnWheelPiece" Type="Indicator" FixedFromPoint="true">
+      <Path>
+        <Point X="50" Y="28.812" />
+        <Point X="47.75" Y="28.812" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAkCAAACKCEAEgAEAAgCBEAAAoAEAAAAIACgA=</HashCode>
+      <FileName>Assets\Scripts\WheelSpinner\WheelSpinner.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="indicatorsOnWheelPiece" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WheelSpinnerController">
+    <Position X="50" Y="31.75" Width="2.25" />
+    <AssociationLine Name="indicators" Type="Indicator" FixedFromPoint="true">
+      <Path>
+        <Point X="50" Y="32.375" />
+        <Point X="47.75" Y="32.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgYRgAAQACUAAAAACAAqAAAAAABBAAAEAABAAAAAQEg=</HashCode>
+      <FileName>Assets\Scripts\WheelSpinner\WheelSpinnerController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="wheelSpinner" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="indicators" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WoldSnatcherController">
+    <Position X="21.5" Y="30.5" Width="2" />
+    <AssociationLine Name="question" Type="QuestionSnatcher" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.625" Y="30.5" />
+        <Point X="22.625" Y="30.125" />
+        <Point X="19.625" Y="30.125" />
+        <Point X="19.625" Y="28.776" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>iAAMAA5ACCAAACoIAkggAACAgQTAAQAAACAAgABAAEA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\Word snatcher\maingame\WoldSnatcherController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="question" />
+      <Field Name="networkManager" />
+      <Field Name="minigame" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="storages" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="User">
+    <Position X="54" Y="21" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEgBBEAAAgkAEAAAAEAAAAABAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Scripts\Player\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Firebase.Database.DatabaseReference">
+    <Position X="54" Y="15.5" Width="3" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Minigame">
+    <Position X="15" Y="30.5" Width="2.25" />
+    <AssociationLine Name="rewards" Type="Reward" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.125" Y="30.5" />
+        <Point X="16.125" Y="29.132" />
+        <Point X="16.75" Y="29.132" />
+        <Point X="16.75" Y="27.562" />
+        <Point X="16.5" Y="27.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAAgAAAQAAAAAAAAAABgAAAAACQgACAAAAgAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\Minigame.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="rewards" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Struct Name="DiscoveryResponse" BaseTypeListCollapsed="true">
+    <Position X="65.75" Y="15.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQARAAAAAAAEAAAAIAABQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Networking\EscapistNetworkDiscovery.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Enum Name="BoardGameState">
+    <Position X="41.75" Y="32" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\Board\BoardGameController.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="punishType">
+    <Position X="32.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Board\Tiles\Tile_Punish.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="QuestionCategory">
+    <Position X="68.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Minigame\QuizMinigame\QuestionData.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
