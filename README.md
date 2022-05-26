@@ -1,4 +1,4 @@
-# dungeon_escapist
+# Dungeon Escapist's Manual
 ## English
 
 
